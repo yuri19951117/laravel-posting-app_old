@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class VendorFactory extends Factory
 {
+    protected $model = post::class;
     /**
      * Define the model's default state.
      *
@@ -18,12 +19,10 @@ class VendorFactory extends Factory
     public function definition(): array
     {
         return [
-        'vendor_code' => fake()->unique()->randomNumber(5, true),
-        'vendor_name' => fake()->company() 
-        /*
+        'id' => 4,
+        'user_id' => fake()->randomnumver(5),
         'title' => fake()->realText(10,3),
         'content' => fake()->realText(10,5)    
-        */
             ];
     }
 }
